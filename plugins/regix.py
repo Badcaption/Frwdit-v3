@@ -48,7 +48,6 @@ async def pub_(bot, message):
                             chat_id=TO,
                             from_chat_id=FROM,
                             parse_mode="md",       
-                            caption=Translation.CAPTION.format(file_name),
                             message_id=message.message_id
                         )
                         total_files += 1
@@ -58,8 +57,10 @@ async def pub_(bot, message):
                         await bot.copy_message(
                             chat_id=TO,
                             from_chat_id=FROM,
-                            parse_mode="md",       
-                            caption=Translation.CAPTION.format(file_name),
+                            parse_mode="md",     
+
+
+
                             message_id=message.message_id
                         )
                         total_files += 1
